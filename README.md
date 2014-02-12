@@ -90,8 +90,8 @@ Key bindings:
 2) locate <keyboard> tag and add a keybinding
 
 Use this as a template:
-	<!-- COPY BELOW HERE -->
-	<keybind key="C-A-S-s">
+	<!-- START COPY AFTER HERE -->
+	"<keybind key="C-A-S-s">
 	  <action name="Execute">
 		<startupnotify>
 		  <enabled>true</enabled>
@@ -99,8 +99,8 @@ Use this as a template:
 		</startupnotify>
 		<command>keyboardlayout se</command>
 	  </action>
-	</keybind>
-	<!-- END COPY ABOVE HERE -->
+	</keybind>"
+	<!-- COPY UNTIL HERE -->
 Note: The C-A-S-s is a combination of the buttons CTRL, ALT, SHIFT and "s" key(s)
 
 
