@@ -1,6 +1,7 @@
 --------------------------
-     Crunchbang Waldorf
-         OPENBOX 
+Crunchbang Waldorf
+OPENBOX 
+SETUP
 --------------------------
 
 The following configurations has worked pretty well with a Sony S15, 2012 edition, laptop and uses Crunchbang Waldorf distribution that uses Openbox as a desktop manager. 
@@ -35,7 +36,7 @@ Find "conky -q" & and replace with "start-conky"
 Replace "geany ~/.conkyrc" with "geany ~/.conky/*"
 Replace "conkywonky" with "start_conky"
 
-# Note: Or simple replace second with 
+Note: Or simple replace second with 
 
 
 5) Reboot computer or restart openbox and you all set.
@@ -50,7 +51,7 @@ This will fetch the latest changes made.
 It may also be fetched from the original author (from which the latter project is forked) by commenting in 
 "git clone https://github.com/unia/powersave.git" (don't forget to comment out old)
 
-# Note: In order to use the status field in conky one must use the repository from "figgefred" (default)
+Note: In order to use the status field in conky one must use the repository from "figgefred" (default)
 
 Installation:
 
