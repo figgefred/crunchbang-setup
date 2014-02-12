@@ -1,0 +1,9 @@
+#!/bin/bash
+tmp=$(cat /usr/local/etc/powersave/active)
+case "$tmp" in
+ 1) echo "Active" ;;
+ 0) echo "False" ;;
+ *) echo "Invalid" ;;
+esac
+
+

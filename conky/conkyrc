@@ -1,0 +1,92 @@
+# Use Xft?
+use_xft yes
+xftfont Trebuchet MS:size=9
+xftalpha 0.8
+text_buffer_size 2048
+background yes
+# Update interval in seconds
+update_interval 5
+xftalpha 0.8
+own_window_argb_visual yes
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 800 0
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 5
+
+# border width
+border_width 1
+
+# Default colors and also border colors
+# default_color white
+# own_window_colour white
+
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer none
+
+#borders
+draw_borders no
+border_margin 4
+
+# Position en bas a droite
+alignment bottom_right
+
+# Decalage par rapport aux bordures
+gap_x 10
+gap_y 50
+
+TEXT
+
+
+${color EAEAEA}${font GE Inspira:pixelsize=55}${alignr}${time %H:%M}${font GE Inspira:pixelsize=18}
+${voffset 10}${alignr}${color EAEAEA}${time %A} ${color 21c2d1}${time %d} ${color EAEAEA}${time %B}
+${font Helvetica:pixelsize=11}${alignr}${color 21c2d1}$color  ${rss http://www.rssweather.com/wx/de/berlin-schoenefeld/rss.php 1 item_titles 1 }
+
+#${font Helvetica:pixelsize=13}${alignr}${color 21c2d1}HOME  $color${fs_used /home} / ${fs_size /home}    ${color 21c2d1}RAM  $color$mem / $memmax    ${color 21c2d1}CPU  $color${cpu cpu0}% 
+${font Helvetica:pixelsize=12}${alignr}${color 21c2d1}CRUNCHBANG-NEWS$color  ${rss http://www.crunchbang.org/news/feed 5 item_titles 1 }
+${font Helvetica:pixelsize=12}${alignr}${color 21c2d1}SweClockers.com$color  ${rss http://www.sweclockers.com/feeds/nyheter 5 item_title 1 }
+${font Helvetica:pixelsize=12}${alignr}${color 21c2d1}SweClockers.com$color  ${rss http://www.sweclockers.com/feeds/nyheter 5 item_title 2 }
+${font Helvetica:pixelsize=12}${alignr}${color 21c2d1}SweClockers.com$color  ${rss http://www.sweclockers.com/feeds/nyheter 5 item_title 3 }

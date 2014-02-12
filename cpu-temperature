@@ -1,0 +1,11 @@
+#!/bin/bash
+tmp=$(exec sensors)
+core="Core $1"
+regex="$core: +\+[0-9]+\.[0-9]+\°C"
+val=$([[ $tmp =~ $regex ]] && echo $BASH_REMATCH)
+val=${val//$core:/}
+val=${val// /}
+val=${val//+/}
+val=${val//°C/}
+echo $val
+

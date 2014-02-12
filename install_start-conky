@@ -1,0 +1,2 @@
+#!/bin/bash
+ln -s /home/scripts/start-conky /usr/bin/start-conky

@@ -1,0 +1,10 @@
+#!/bin/bash
+tmp=$(exec acpi)
+battery="Battery $1"
+regex=" *$battery: +[a-zA-Z]+, +[0-9]+% *"
+val=$( [[ "$tmp" =~ $regex ]] && echo $BASH_REMATCH)
+regex="[0-9]+%"
+value=$( [[ "$val" =~ $regex ]] && echo $BASH_REMATCH)
+value=${value// /}
+value=${value//%/}
+echo $value

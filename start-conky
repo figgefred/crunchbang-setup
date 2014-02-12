@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ "$(pidof conky)" ]; then
+    echo "Killing all conky sessions before starting new.."
+    killall conky
+    echo "Done!"
+fi
+
+conky -c ~/.conky/conkyrc &
+sleep 1s
+conky -c ~/.conky/conkyrc_grey &
+sleep 1s
+conky -c ~/.conky/conkyrc_grey_net &
+sleep 1s

@@ -1,0 +1,13 @@
+#!/bin/bash
+tmp=$(exec acpi)
+battery="Battery $1"
+regex=" *$battery: +[a-zA-Z]+, +[0-9]+% *"
+val=$( [[ "$tmp" =~ $regex ]] && echo $BASH_REMATCH)
+if [[ -z "$val" ]] ; then
+	echo "Disconnected"
+	exit
+fi
+value=$( [[ "$val" =~ (('Charging')|('Discharging')|('Unknown')|('unknown')) ]] && echo $BASH_REMATCH)
+value=${value// /}
+value=${value//Unknown/Idle}
+echo $value

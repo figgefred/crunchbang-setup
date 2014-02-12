@@ -1,0 +1,4 @@
+#!/bin/bash
+val=$(cat /proc/acpi/bbswitch)
+arr=($val)
+echo ${arr[1]}

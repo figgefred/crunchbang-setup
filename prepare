@@ -1,0 +1,12 @@
+path="./"
+echo "Path is assumed to be $path, is this correct?"
+echo "acpi lm-sensors dkms will be installed.. ok?"
+echo "Installing acpi, lm-sensors and dkms!"
+apt-get update
+apt-get install acpi lm-sensors dkms
+echo "Done!"
+echo "Location is assumed to be at $path"
+echo "Setting all scripts as executable (chmod $path 755 -R)..."
+chmod 755 "$path" -R
+echo "Done!"
+touch hej

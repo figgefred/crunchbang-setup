@@ -1,0 +1,40 @@
+#!/bin/bash
+if [ ! -z "$1" -a "$1" != " " ]; then
+	case $1 in 
+		en|us|US):
+			setxkbmap \
+			  -option compose:rctrl \
+			  -option lv3:ralt_switch \
+			  -option terminate:ctrl_alt_bkspc \
+			  -option eurosign:e \
+			  -option nbsp:level3n \
+			  -model pc105 \
+			  -variant altgr-intl us
+			notification="US English set as new keyboardlayout." ;;
+	
+		de|DE):
+			setxkbmap \
+			  -option compose:rctrl \
+			  -option lv3:ralt_switch \
+			  -option terminate:ctrl_alt_bkspc \
+			  -option eurosign:e \
+			  -option nbsp:level3n \
+			  -model pc105 \
+			  -variant nodeadkeys de
+			notification="German set as new keyboardlayout." ;;
+		se|SE):
+			setxkbmap \
+			  -option compose:rctrl \
+			  -option lv3:ralt_switch \
+			  -option terminate:ctrl_alt_bkspc \
+			  -option eurosign:e \
+			  -option nbsp:level3n \
+			  -model pc105 \
+			  -variant nodeadkeys se
+			notification="Swedish set as new keyboardlayout." ;;
+		*):
+			setxkbmap -model pc105 $1
+			notification="Generic set of $1 as new keyboardlayout. This may contain dead keys or the the change may fail." 
+	esac
+	notify-send "$notification" --icon=dialog-information
+fi
