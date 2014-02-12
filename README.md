@@ -8,6 +8,9 @@ The following configurations has worked pretty well with a Sony S15, 2012 editio
 
 It is assumed that conky is already installed and that most default configurations from a Crunchbang Waldorf installation are set. If not, some steps may not be entirely correct and you must figure out by yourself where to make a replace or change.
 
+IT IS ALSO ASSUMED THAT THE LOCATION OF THIS REPOSITORY WILL BE IN "/home/scripts/"
+If you change it, then it must be changed in ALL the scripts.
+
 This README will guide you throught the setup of:
 
  - conky configurations
@@ -91,7 +94,7 @@ Key bindings:
 
 Use this as a template:
 	<!-- START COPY AFTER HERE -->
-	"<keybind key="C-A-S-s">
+	<keybind key="C-A-S-s">
 	  <action name="Execute">
 		<startupnotify>
 		  <enabled>true</enabled>
@@ -99,7 +102,7 @@ Use this as a template:
 		</startupnotify>
 		<command>keyboardlayout se</command>
 	  </action>
-	</keybind>"
+	</keybind>
 	<!-- COPY UNTIL HERE -->
 Note: The C-A-S-s is a combination of the buttons CTRL, ALT, SHIFT and "s" key(s)
 
