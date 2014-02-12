@@ -1,6 +1,6 @@
 --------------------------
      Crunchbang Waldorf
--------- OPENBOX ---------
+         OPENBOX 
 --------------------------
 
 The following configurations has worked pretty well with a Sony S15, 2012 edition, laptop and uses Crunchbang Waldorf distribution that uses Openbox as a desktop manager. 
@@ -15,14 +15,14 @@ This README will guide you throught the setup of:
  - keyboardlayout with keybindings
 
 
--------
+
 # Conky
 -------
 
 1) Login as root or run using sudo the run prepare script.
 
-# Note: Installs acpi and lm-sensors, both used by different scripts that this conky setup is dependent on.
-#       Also sets all the scripts at CHMOD 755 (owner/group/public rwx/r-x/r-x)
+   Note: Installs acpi and lm-sensors, both used by different scripts that this conky setup is dependent on.
+         Also sets all the scripts at CHMOD 755 (owner/group/public rwx/r-x/r-x)
 
 2) Run the "install_conky-start"
 
@@ -40,7 +40,7 @@ Replace "conkywonky" with "start_conky"
 
 5) Reboot computer or restart openbox and you all set.
 
------------
+
 # Powersave
 -----------
 
@@ -58,7 +58,7 @@ Installation:
 
 See powersave/README.md for more details.
 
-----------
+
 # bbswitch
 ----------
 bbswitch is a module from the bumblebee project. It is used in this configuration to turn off a second discrete nvidia graphics card to conserve power. Very effective and noticeable.
@@ -70,7 +70,7 @@ See bbswitch/README.md for more specifics and howtos.
 INSTALLATIONS:
  - See bbswitch/README.md
 
-----------------------------------
+
 # Keyboardlayout (and keybindings)
 ----------------------------------
 Keyboardlayout is kind of annyoing in crunchbang. Using this scripts it will hopefully become less painful.
@@ -100,7 +100,7 @@ Use this as a template:
 	  </action>
 	</keybind>
 	<!-- END COPY ABOVE HERE -->
-# Note: The C-A-S-s is a combination of the buttons CTRL, ALT, SHIFT and "s" key(s)
+Note: The C-A-S-s is a combination of the buttons CTRL, ALT, SHIFT and "s" key(s)
 
 
 
