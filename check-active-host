@@ -1,0 +1,6 @@
+#!/bin/bash
+if ping -c 1 $1; then
+echo "Active"
+else
+echo "Inactive"
+fi

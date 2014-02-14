@@ -1,2 +1,3 @@
 #!/bin/bash
 ln -s /home/scripts/keyboardlayout /usr/bin/keyboardlayout
+ln -s /home/scripts/keyboardlayout-current /usr/bin/keyboardlayout-current

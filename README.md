@@ -2,6 +2,8 @@
      Crunchbang Waldorf
 -------- OPENBOX ---------
 --------------------------
+Author: Frederick Ceder
+--------------------------
 
 The following configurations has worked pretty well with a Sony S15, 2012 edition, laptop and uses Crunchbang Waldorf distribution that uses Openbox as a desktop manager. 
 
@@ -55,6 +57,9 @@ It may also be fetched from the original author (from which the latter project i
 Installation:
 
 1) Run as root "make install" in the powersave/ directory.
+
+2) (OPTIONAL) In order for this script to run on boot add it to "rc.local" as it requires root access
+              Add "powersave" to "/etc/rc.local". Make sure the file ends with "exit 0"
 
 See powersave/README.md for more details.
 
