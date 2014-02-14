@@ -1,6 +1,7 @@
 --------------------------
-     Crunchbang Waldorf
--------- OPENBOX ---------
+Crunchbang Waldorf
+OPENBOX 
+SETUP
 --------------------------
 Author: Frederick Ceder
 --------------------------
@@ -8,6 +9,9 @@ Author: Frederick Ceder
 The following configurations has worked pretty well with a Sony S15, 2012 edition, laptop and uses Crunchbang Waldorf distribution that uses Openbox as a desktop manager. 
 
 It is assumed that conky is already installed and that most default configurations from a Crunchbang Waldorf installation are set. If not, some steps may not be entirely correct and you must figure out by yourself where to make a replace or change.
+
+IT IS ALSO ASSUMED THAT THE LOCATION OF THIS REPOSITORY WILL BE IN "/home/scripts/"
+If you change it, then it must be changed in ALL the scripts.
 
 This README will guide you throught the setup of:
 
@@ -17,14 +21,14 @@ This README will guide you throught the setup of:
  - keyboardlayout with keybindings
 
 
--------
+
 # Conky
 -------
 
 1) Login as root or run using sudo the run prepare script.
 
-# Note: Installs acpi and lm-sensors, both used by different scripts that this conky setup is dependent on.
-#       Also sets all the scripts at CHMOD 755 (owner/group/public rwx/r-x/r-x)
+   Note: Installs acpi and lm-sensors, both used by different scripts that this conky setup is dependent on.
+         Also sets all the scripts at CHMOD 755 (owner/group/public rwx/r-x/r-x)
 
 2) Run the "install_conky-start"
 
@@ -37,12 +41,12 @@ Find "conky -q" & and replace with "start-conky"
 Replace "geany ~/.conkyrc" with "geany ~/.conky/*"
 Replace "conkywonky" with "start_conky"
 
-# Note: Or simple replace second with 
+Note: Or simple replace second with 
 
 
 5) Reboot computer or restart openbox and you all set.
 
------------
+
 # Powersave
 -----------
 
@@ -52,7 +56,7 @@ This will fetch the latest changes made.
 It may also be fetched from the original author (from which the latter project is forked) by commenting in 
 "git clone https://github.com/unia/powersave.git" (don't forget to comment out old)
 
-# Note: In order to use the status field in conky one must use the repository from "figgefred" (default)
+Note: In order to use the status field in conky one must use the repository from "figgefred" (default)
 
 Installation:
 
@@ -63,7 +67,7 @@ Installation:
 
 See powersave/README.md for more details.
 
-----------
+
 # bbswitch
 ----------
 bbswitch is a module from the bumblebee project. It is used in this configuration to turn off a second discrete nvidia graphics card to conserve power. Very effective and noticeable.
@@ -75,7 +79,7 @@ See bbswitch/README.md for more specifics and howtos.
 INSTALLATIONS:
  - See bbswitch/README.md
 
-----------------------------------
+
 # Keyboardlayout (and keybindings)
 ----------------------------------
 Keyboardlayout is kind of annyoing in crunchbang. Using this scripts it will hopefully become less painful.
@@ -94,7 +98,7 @@ Key bindings:
 2) locate <keyboard> tag and add a keybinding
 
 Use this as a template:
-	<!-- COPY BELOW HERE -->
+	<!-- START COPY AFTER HERE -->
 	<keybind key="C-A-S-s">
 	  <action name="Execute">
 		<startupnotify>
@@ -104,8 +108,8 @@ Use this as a template:
 		<command>keyboardlayout se</command>
 	  </action>
 	</keybind>
-	<!-- END COPY ABOVE HERE -->
-# Note: The C-A-S-s is a combination of the buttons CTRL, ALT, SHIFT and "s" key(s)
+	<!-- COPY UNTIL HERE -->
+Note: The C-A-S-s is a combination of the buttons CTRL, ALT, SHIFT and "s" key(s)
 
 
 
