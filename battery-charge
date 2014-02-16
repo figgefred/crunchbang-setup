@@ -7,4 +7,8 @@ regex="[0-9]+%"
 value=$( [[ "$val" =~ $regex ]] && echo $BASH_REMATCH)
 value=${value// /}
 value=${value//%/}
+if [[ -z "$value" ]] ; then
+	echo 0
+	exit 0
+fi
 echo $value
