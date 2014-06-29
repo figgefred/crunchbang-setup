@@ -1,0 +1,14 @@
+#!/bin/bash
+apt-get install python-pip &&
+pip install django &&
+pip install django-extensions &&
+pip install ipython ipdb &&
+pip install Werkzeug &&
+echo "" &&
+echo "NOTES" &&
+echo " # Don't forget to add django-extensions in settings.py for projects" &&
+echo " # Run ipython using 'manage.py shell_plus' with packages imported" && 
+echo " # Use werkzeug by running 'manage.py runserver_plus'"
+
+
+

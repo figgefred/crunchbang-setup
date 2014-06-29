@@ -1,0 +1,4 @@
+#!/bin/bash
+ln -sf /opt/mozilla/firefox/firefox /usr/bin/firefox
+ln -sf /opt/mozilla/thunderbird/thunderbird /usr/bin/thunderbird
+ln -sf /opt/eclipse/eclips /usr/bin/eclipse

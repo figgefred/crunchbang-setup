@@ -1,7 +1,12 @@
 #!/bin/bash
 #song_list_format="{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
-song_status_format="{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+#song_status_format="{{{%a} \"%b\"{ (%y)}} - }{%t}}|{%f}"
+song_status_format="{$8%n▕ $9}{$2%a - $9}{$4%t$9}|{$5%f$9}$R{$5▕ %b$9}{$8▕ %l$9}"
 #song_library_format="{%n - }{%t}|{%f}"
 #tag_editor_album_format="{(%y) }%b"
 #
-ncmpcpp --now-playing "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+if [ $# -gt 0 -a ! -z "$1" -a "$1" != " " ]; then
+	ncmpcpp -h $1 --now-playing "{$8%n▕ $9}{$2%a - $9}{$4%t$9}|{$5%f$9}$R{$5▕ %b$9}{$8▕ %l$9}"
+	exit
+fi
+ncmpcpp --now-playing "{$8%n▕ $9}{$2%a - $9}{$4%t$9}|{$5%f$9}$R{$5▕ %b$9}{$8▕ %l$9}"

@@ -12,5 +12,5 @@ sleep 1s
 conky -c ~/.conky/conkyrc_grey_net &
 sleep 1s
 
-# Ugly hack to keep the powersave status in sync. For some reason it doesn't write the correct value to the respective file when doing executing powersave. This will do though.
+# Ugly hack to keep the powersave status in sync. For some reason it doesn't write the correct value to the respective file when doing executing powersave. This will allow to do it though, yet all configurations will fail -  they have already been set at bootup.
 powersave

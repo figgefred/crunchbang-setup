@@ -1,6 +1,7 @@
 #!/bin/bash
-if ping -c 1 $1; then
-echo "Active"
+if ping -c 1 -w 100 $1 > /dev/null; then
+#if fping -A -b 32 -c 1 -q -t 50 $1 > /dev/null 2> /dev/null; then
+echo "1"
 else
-echo "Inactive"
+echo "0"
 fi

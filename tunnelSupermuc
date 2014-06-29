@@ -1,0 +1,16 @@
+#!/bin/bash
+
+middleman="ceder@halle.in.tum.de"
+target="supermuc.lrz.de:22"
+port=55555
+
+echo "Setting up tunnel to '$target'"
+ssh -4 -L 55555:$target -f -N $middleman
+echo "$target is now reachable on <user>@localhost (on port $port)"
+
+
+# echo "Mount a remote directory"
+# sshfs -p $port h039vao@localhost:/home/hpc/h039v/h039vao/projects test1
+
+# Sync file from local <source> to remote <user@localhost:destination> with rsync
+# rsync -av -e "ssh -p55555" <source> <user@localhost:destination>
