@@ -9,4 +9,3 @@ echo "Location is assumed to be at $path"
 echo "Setting all scripts as executable (chmod $path 755 -R)..."
 chmod 755 "$path" -R
 echo "Done!"
-touch hej

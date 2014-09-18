@@ -1,0 +1,2 @@
+#!/bin/bash
+ln -sf /home/scripts/tunnelSupermuc /usr/bin/tunnelSupermuc
